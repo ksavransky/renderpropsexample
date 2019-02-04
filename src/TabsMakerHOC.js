@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const TabsMaker = (TabBodyComponent, TabControlComponent, tabInformation) => (
+const TabsMakerHOC = (TabBodyComponent, TabControlComponent, tabInformation) => (
   class TabsContainer extends Component {
     constructor(props) {
       super(props)
@@ -25,4 +25,4 @@ const TabsMaker = (TabBodyComponent, TabControlComponent, tabInformation) => (
 )
 
 
-export default TabsMaker;
+export default TabsMakerHOC;

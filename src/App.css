@@ -22,9 +22,10 @@ li.active {
   background: lightgrey;
 }
 
-.tabs-body-yellow {
-  background: yellow;
-  border: 1px solid yellow;
+.tabs-body {
+  margin: auto;
+  width: 90%;
+  border: 2px solid blue;
   height: 100px;
   display: flex;
   justify-content: center;

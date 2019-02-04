@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import TabsMaker from './TabsMaker.js'
+import TabsMakerHOC from './TabsMakerHOC.js'
 import TabsBody from './TabsBody.js'
 import TabsOnTop from './TabsOnTop.js'
+import TabsRenderProps from './TabsRenderProps.js'
 import './App.css';
 
 const DATA = [
@@ -16,12 +17,28 @@ const DATA = [
   },
 ]
 
+// class App extends Component {
+//   render() {
+//     const TabsContainer = TabsMakerHOC(TabsBody, TabsOnTop, DATA)
+//     return (
+//       <div className="App">
+//         <TabsContainer />
+//       </div>
+//     );
+//   }
+// }
+
 class App extends Component {
   render() {
-    const TabsContainer = TabsMaker(TabsBody, TabsOnTop, DATA)
     return (
       <div className="App">
-        {<TabsContainer />}
+        <TabsRenderProps
+          render={renderProps => (
+            <div>
+              <TabsOnTop {...renderProps} tabInformation={DATA} />
+              <TabsBody {...renderProps} />
+            </div>
+        )}/>
       </div>
     );
   }
