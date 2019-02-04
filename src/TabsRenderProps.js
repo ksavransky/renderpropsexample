@@ -12,6 +12,8 @@ const DATA = [
   },
 ]
 
+// implement a component that works with render props
+// this component is very similar to an HOC in functionality
 class TabsRenderProps extends Component {
   constructor(props) {
     super(props)
@@ -22,6 +24,8 @@ class TabsRenderProps extends Component {
 
   setTab = (tabNumber) => this.setState({currentTab: tabNumber})
 
+  // create render props to pass to any child components
+  // note: not using the this.props.children, just this.props.render
   render() {
     const currentBody = DATA[this.state.currentTab].body
     const renderProps = {

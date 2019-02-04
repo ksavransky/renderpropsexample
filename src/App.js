@@ -28,6 +28,13 @@ const DATA = [
 //   }
 // }
 
+
+// render props work very similarly to a HOC
+// let's you abstract what components are passed in and combine them with preset props
+
+// using render props
+// pass render props defined in TabsRenderProps to any children components via a function like so:
+
 class App extends Component {
   render() {
     return (
