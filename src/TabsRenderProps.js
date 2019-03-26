@@ -26,6 +26,8 @@ class TabsRenderProps extends Component {
 
   // create render props to pass to any child components
   // note: not using the this.props.children, just this.props.render
+  // props.render is literally a prop like any other prop (e.g. classType, isShowing etc...)
+  // can change 'render' to 'renderABC' and it will work (change it in App.js too - go look)
   render() {
     const currentBody = DATA[this.state.currentTab].body
     const renderProps = {

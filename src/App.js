@@ -35,6 +35,9 @@ const DATA = [
 // using render props
 // pass render props defined in TabsRenderProps to any children components via a function like so:
 
+// NOTE: it's called renderProps because you are literally passing render={...} as a prop
+// to the HOC-like TabsRenderProps component
+// can change 'render' to 'renderABC' and it will work (change it in TabsRenderProps.js too - go look)
 class App extends Component {
   render() {
     return (
@@ -45,7 +48,8 @@ class App extends Component {
               <TabsOnTop {...renderProps} tabInformation={DATA} />
               <TabsBody {...renderProps} />
             </div>
-        )}/>
+          )}
+        />
       </div>
     );
   }
